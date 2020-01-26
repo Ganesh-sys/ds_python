@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>students list</title>
+
+	<body bgcolor="yellow"><center>
+		<h1>student details</h1></center>
+	<table bgcolor="pink"  border="3" width="80%">
+	<thead bgcolor="green">
+	<th>studentname</th>
+	<th>coursename</th>
+	<th>yop</th>
+	<th>qualification</th>
+	<th>fee</th>
+	<th>marks%</th>
+	<th>discount</th>
+	<th>total fee</th></thead>
+	{% for i  in courseslist %}
+	<tr>
+		<td>{{i.sname}}</td>
+		<td>{{i.cname}}</td>
+		<td>{{i.yop}}</td>
+		<td>{{i.qual}}</td>
+		<td>{{i.fee}}</td>
+		<td>{{i.marks}}</td>
+		
+		<!--<td>{{i.discount}}</td>-->
+
+		{% if i.marks >= 85 %}
+			<td>3000</td>
+			{% elif i.marks >= 75 %}
+			<td>1500</td>
+			{% elif i.marks >= 60 %}
+			<td>1000</td>
+			{% else %}
+			<td>no discount</td>
+		{% endif %}
+
+	</tr>
+	{% endfor %}
+</table>
+</body>
+</head>
+</html>
+
+
+
+
