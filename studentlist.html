@@ -5,7 +5,7 @@
 	<body bgcolor="yellow"><center>
 		<h1>student details</h1></center>
 	<table bgcolor="pink"  border="3" width="80%">
-	<thead bgcolor="green">
+	<thead bgcolor="yellow">
 	<th>studentname</th>
 	<th>coursename</th>
 	<th>yop</th>
@@ -26,11 +26,11 @@
 		<!--<td>{{i.discount}}</td>-->
 
 		{% if i.marks >= 85 %}
-			<td>3000</td>
+			<td>5000</td>
 			{% elif i.marks >= 75 %}
-			<td>1500</td>
+			<td>2000</td>
 			{% elif i.marks >= 60 %}
-			<td>1000</td>
+			<td>1100</td>
 			{% else %}
 			<td>no discount</td>
 		{% endif %}
