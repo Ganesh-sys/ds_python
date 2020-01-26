@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>single course page</title>
+</head>
+<body bgcolor="pink">
+	<center><h1><u>offered courses list</u></h1></center>	
+	<table border="3" width="100%">
+	<thead bgcolor="yellow">
+		
+		<th>Course Name</th>
+		<th>salary</th>
+		<th>Duration</th>
+		<th>TeamLead</th></thead>
+	{% for i in coursesdb %}
+	<tr>
+		
+		<td>{{i.cname}}</td>
+		<td>{{i.salary}}</td>
+		<td>{{i.duration}}</td>
+		<td>{{i.TeamLead}}</td>
+	</tr>
+	{% endfor %}
+	</table>
+</body>
+</html>
